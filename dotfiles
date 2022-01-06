@@ -1,0 +1,59 @@
+#!/bin/sh
+
+install_vim() {
+  echo "installing vim"
+  stow vim
+  ## manual installation not needed, its automatic in vimrc
+  # if [ -e ~/.vim/autoload/plug.vim ]; then
+  #   echo "plug.vim already installed"
+  # else
+  #   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  #     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 2>/dev/null
+  # fi
+  #vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
+}
+install_zsh() {
+  echo "installing zsh"
+  echo "IMPORTANT 'exit' out of zsh after ohmyzsh is done, enter to confirm"
+  read
+  if [ ! -e ~/.oh-my-zsh ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  fi
+  rm -f ~/.zshrc
+  stow zsh
+}
+
+uninstall_zsh() {
+  echo "uninstalling zsh"
+  stow -D zsh 2> /dev/null
+  rm -rf ~/.oh-my-zsh
+}
+
+uninstall_vim() {
+  echo "uninstalling vim"
+  stow -D vim 2> /dev/null
+  rm -rf ~/.vim
+}
+
+install_all() {
+  echo "installing all..."
+  install_vim
+  install_zsh
+  echo "done!"
+}
+
+uninstall_all() {
+  echo "uninstalling all"
+  uninstall_vim
+  uninstall_zsh
+  echo "done!"
+}
+
+
+# when called with no arguments install_all
+# else execute first parameter
+if [ -z "$1" ]; then
+  install_all
+else
+  "$1"
+fi
