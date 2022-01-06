@@ -12,14 +12,23 @@ install_vim() {
   # fi
   #vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 }
+
+uninstall_vim() {
+  echo "uninstalling vim"
+  stow -D vim 2> /dev/null
+  rm -rf ~/.vim
+}
+
 install_zsh() {
   echo "installing zsh"
-  echo "IMPORTANT 'exit' out of zsh after ohmyzsh is done, enter to confirm"
-  read
-  if [ ! -e ~/.oh-my-zsh ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  if [ -e ~/.oh-my-zsh ]; then
+    echo "ohmyzsh already installed"
+  else
+    echo "exit shell after oh my zsh installer to complete installation, confirm with enter"
+    read
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi
-  rm -f ~/.zshrc
+  rm ~/.zshrc
   stow zsh
 }
 
@@ -29,23 +38,41 @@ uninstall_zsh() {
   rm -rf ~/.oh-my-zsh
 }
 
-uninstall_vim() {
-  echo "uninstalling vim"
-  stow -D vim 2> /dev/null
-  rm -rf ~/.vim
+install_tmux() {
+  echo "installing tmux"
+  stow tmux
 }
 
-install_all() {
-  echo "installing all..."
+uninstall_tmux() {
+  echo "uninstalling tmux"
+  stow -D tmux 2> /dev/null
+}
+
+install_console() {
+  echo "installing console"
   install_vim
   install_zsh
+  install_tmux
+}
+
+uninstall_console() {
+  echo "uninstalling console"
+  uninstall_vim
+  uninstall_zsh
+  uninstall_tmux
+}
+
+install() {
+  echo "installing all..."
+  stow profile
+  install_console
   echo "done!"
 }
 
-uninstall_all() {
-  echo "uninstalling all"
-  uninstall_vim
-  uninstall_zsh
+uninstall() {
+  echo "uninstalling all..."
+  stow -D profile 2>/dev/null
+  uninstall_console
   echo "done!"
 }
 
@@ -53,7 +80,7 @@ uninstall_all() {
 # when called with no arguments install_all
 # else execute first parameter
 if [ -z "$1" ]; then
-  install_all
+  install
 else
   "$1"
 fi

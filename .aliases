@@ -1,0 +1,40 @@
+#!/usr/bin/env sh
+
+alias pin='ping -c 3 8.8.8.8'
+alias smysqldump="mysqldump --single-transaction --quick --lock-tables=false"
+alias myip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
+
+# git
+alias gac="git add -A && git commit -am"
+alias grh="git reset --hard"
+alias gpush="git push"
+alias gpull="git pull"
+alias gst="git status"
+alias pgp="pass git push"
+
+
+# shortcuts
+alias t='tail -f'
+alias h="history"
+alias v="vim"
+alias f="ranger"
+
+# configs
+alias ho="sudo vim /etc/hosts"
+
+# dir shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias cdd="cd ~/.dotfiles"
+alias cdr="cd ~/repos"
+alias cds="cd ~/scripts"
+alias www="cd /var/www/"
+
+# tmux
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+

@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+## aliases
+alias mysqlshow="ls -n ~/.my.cnf"
+
+# shortcuts
+alias p="sudo pacman"
+
+# cli apps
+alias m="mutt"
+alias i="irssi"
+
+# notifications
+alias notify='dunstify'
+
+# misc
+alias q3='~/ioquake3/quake3e.x64 +set fs_game cpma +connect'
+
+# jekyll blog
+alias blogbuild="bundle exec jekyll build"
+alias blogserve="bundle exec jekyll serve"

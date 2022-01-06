@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$SCRIPTS"/userspace/init.sh
+. "$SCRIPTS"/userspace/utils.sh
+. "$SCRIPTS"/userspace/audio.sh
+. "$SCRIPTS"/userspace/dmenu.sh
+. "$SCRIPTS"/userspace/status.sh
+. "$SCRIPTS"/devtools/typo3.sh
+. "$SCRIPTS"/devtools/magento2.sh
+. "$SCRIPTS"/devtools/webserver.sh
+. "$SCRIPTS"/devtools/mysql.sh
