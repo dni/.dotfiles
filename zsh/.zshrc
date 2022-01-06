@@ -9,6 +9,8 @@ source ~/.profile
 alias -g G='| grep'
 alias -g M='| more'
 alias -g L='| less'
+alias -g T='| tail'
+alias -g H='| head'
 alias -g J='| jq'
 
 # enable vi mode

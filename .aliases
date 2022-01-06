@@ -14,7 +14,7 @@ alias pgp="pass git push"
 
 
 # shortcuts
-alias t='tail -f'
+alias t='tree -I ".git" -a'
 alias h="history"
 alias v="vim"
 alias f="ranger"
