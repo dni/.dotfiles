@@ -24,6 +24,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'preservim/tagbar'
 Plug 'vim-python/python-syntax'
 Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
 call plug#end()
 
 set background=dark
@@ -58,6 +59,31 @@ nmap <leader>h :nohl<CR>
 nmap <leader>c gcc
 " code format everything
 nmap <leader>f gg=G
+
+" maximizer
+nnoremap <leader>m :MaximizerToggle<CR>
+vnoremap <leader>m :MaximizerToggle<CR>gv
+inoremap <leader>m <C-o>:MaximizerToggle<CR>
+
+" DEBUGGER
+nnoremap <leader>dd :call vimspector#Launch()<CR>
+nnoremap <leader>dq :call vimspector#Reset()<CR>
+nnoremap <leader>d<space> :call vimspector#Continue()<CR>
+
+nnoremap <leader>dc :call GotoWindow(g:vimspector_session_windows.code)<CR>
+nnoremap <leader>dt :call GotoWindow(g:vimspector_session_windows.tagpage)<CR>
+nnoremap <leader>dv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
+nnoremap <leader>dw :call GotoWindow(g:vimspector_session_windows.watches)<CR>
+nnoremap <leader>ds :call GotoWindow(g:vimspector_session_windows.stack_trace)<CR>
+nnoremap <leader>do :call GotoWindow(g:vimspector_session_windows.output)<CR>
+
+nmap <leader>dh <Plug>VimspectorStepOver
+nmap <leader>dj <Plug>VimspectorStepInto
+nmap <leader>dk <Plug>VimspectorStepOut
+nmap <leader>dl <Plug>VimspectorRunToCursor
+nmap <leader>dr <Plug>VimspectorRestart
+nmap <leader>db <Plug>VimspectorToggleBreakpoint
+nmap <leader>dbc <Plug>VimspectorToggleConditionalBreakpoint
 
 nmap <C-x> :q<CR>
 nmap <C-x><C-x> :q!<CR>

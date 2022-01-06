@@ -3,12 +3,14 @@
 alias pin='ping -c 3 8.8.8.8'
 alias smysqldump="mysqldump --single-transaction --quick --lock-tables=false"
 alias myip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
+cht(){ curl cht.sh/$1 }
+mkcd(){ mkdir $1;cd $1 }
 
 # git
 alias gac="git add -A && git commit -am"
 alias grh="git reset --hard"
-alias gpush="git push"
-alias gpull="git pull"
+alias gp="git push"
+alias gpu="git pull"
 alias gst="git status"
 alias pgp="pass git push"
 
@@ -20,6 +22,8 @@ alias v="vim"
 alias f="ranger"
 
 # configs
+alias sp="source ~/.profile"
+alias vrc="vim ~/.vimrc"
 alias ho="sudo vim /etc/hosts"
 
 # dir shortcuts
@@ -37,4 +41,3 @@ alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
-

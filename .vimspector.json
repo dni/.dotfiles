@@ -1,0 +1,19 @@
+{
+  "configurations": {
+    "testproject: Launch": {
+      "adapter": "debugpy",
+      "filetypes": [ "python" ],
+      "configuration": {
+        "name": "testproject: Launch",
+        "type": "python",
+        "request": "launch",
+        "cwd": "/home/dni/.dotfiles/",
+        "python": "/usr/bin/python3",
+        "stopOnEntry": true,
+        "console": "externalTerminal",
+        "debugOptions": [],
+        "program": "test.py"
+      }
+    }
+  }
+}
