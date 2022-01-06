@@ -6,12 +6,16 @@ requires stow to manage to symlinks
  chmod +x dotfiles
  ./dotfiles # installs all dotfiles
  ./dotfiles uninstall_all # installs all dotfiles
+
+ # install single modules
  ./dotfiles install_vim
  ./dotfiles uninstall_vim
 ```
+## my scripts
+[dni's scripts](https://github.com/dni/scripts)
 
 ## old dotfiles
-[https://github.com/dni/dotfiles](old repository)
+[old repository](https://github.com/dni/dotfiles)
 
 ##vim submodules
 https://github.com/kchmck/vim-coffee-script.git

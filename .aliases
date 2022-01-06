@@ -16,6 +16,7 @@ alias pgp="pass git push"
 
 
 # shortcuts
+alias sk='screenkey -s small --opacity 0.1 &'
 alias t='tree -I ".git" -a'
 alias h="history"
 alias v="vim"
