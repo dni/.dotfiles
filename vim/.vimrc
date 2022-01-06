@@ -100,11 +100,13 @@ nmap <c-j> :bprevious<cr>
 
 
 " Fugitive Conflict Resolution
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gd :Gvdiffsplit!<CR>
-nnoremap gdh :diffget //2<CR>
-nnoremap gdl :diffget //3<CR>
-nnoremap gdu :diffupdate<CR>
-nnoremap gdw :Gwrite!<CR>
+nnoremap <leader>gh :diffget //2<CR>
+nnoremap <leader>gl :diffget //3<CR>
+nnoremap <leader>gu :diffupdate<CR>
+nnoremap <leader>gw :Gwrite!<CR>
 
 
 set noswapfile
