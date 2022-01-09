@@ -1,31 +1,33 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+  autocmd VimEnter * PlugInstall --sync
 endif
 
 call plug#begin()
 Plug 'scrooloose/nerdtree'
-Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-commentary'
-Plug 'groenewege/vim-less'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'groenewege/vim-less'
 Plug 'elzr/vim-json'
 Plug 'bling/vim-airline'
-Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
-" Plug 'tomasr/molokai'
-Plug 'morhetz/gruvbox'
+Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
-Plug 'kien/ctrlp.vim'
-Plug 'vim-vdebug/vdebug'
 Plug 'rust-lang/rust.vim'
 Plug 'preservim/tagbar'
 Plug 'vim-python/python-syntax'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-journal'
+Plug 'airblade/vim-rooter'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
+Plug 'morhetz/gruvbox'
+" Plug 'tomasr/molokai'
 call plug#end()
+
 
 set background=dark
 " colorscheme molokai
@@ -36,7 +38,6 @@ syntax enable
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
-nmap - <nop>
 
 " good practice
 " map <up> <nop>
@@ -62,8 +63,8 @@ nmap <leader>f gg=G
 
 " maximizer
 nnoremap <leader>m :MaximizerToggle<CR>
-vnoremap <leader>m :MaximizerToggle<CR>gv
-inoremap <leader>m <C-o>:MaximizerToggle<CR>
+"vnoremap <leader>m :MaximizerToggle<CR>gv
+"inoremap <leader>m <C-o>:MaximizerToggle<CR>
 
 " DEBUGGER
 nnoremap <leader>dd :call vimspector#Launch()<CR>
@@ -108,6 +109,13 @@ nnoremap <leader>gl :diffget //3<CR>
 nnoremap <leader>gu :diffupdate<CR>
 nnoremap <leader>gw :Gwrite!<CR>
 
+" FZF
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fr :Rg<CR>
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>fm :Marks<CR>
+nnoremap <leader>ft :Tags<CR>
+
 
 set noswapfile
 set number
@@ -142,10 +150,15 @@ let g:vim_markdown_folding_disabled=1
 " nerdtree
 let g:nerdtree_plugin_open_cmd = 'open'
 " let NERDTreeShowHidden=1
-"
+
 let g:python_highlight_all = 1
 
 hi Normal guibg=NONE ctermbg=NONE
 
 " SNIPPETS
 " ab print_r echo "<pre>";<CR>print_r();<CR>die();<ESC>kf)
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync
+\| endif

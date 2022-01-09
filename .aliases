@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+
+alias p='sudo pacman'
+alias pin='ping -c 3 8.8.8.8'
 alias pin='ping -c 3 8.8.8.8'
 alias smysqldump="mysqldump --single-transaction --quick --lock-tables=false"
 alias myip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
@@ -20,6 +23,7 @@ alias sk='screenkey -s small --opacity 0.1 &'
 alias t='tree -I ".git" -a'
 alias h="history"
 alias v="vim"
+alias vf='vim $(fzf)'
 alias f="ranger"
 
 # configs
