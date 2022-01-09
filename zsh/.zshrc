@@ -3,7 +3,7 @@ ZSH_THEME="essembeh"
 #ZSH_THEME="candy"
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-source ~/.profile
+[[ -e ~/.myprofile ]] && source ~/.myprofile
 
 # zsh only aliases
 alias -g G='| grep'
