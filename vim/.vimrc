@@ -29,6 +29,7 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 
+set relativenumber
 set background=dark
 " colorscheme molokai
 colorscheme gruvbox
