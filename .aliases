@@ -4,6 +4,10 @@ alias p='sudo pacman'
 alias pin='ping -c 3 8.8.8.8'
 alias smysqldump="mysqldump --single-transaction --quick --lock-tables=false"
 alias myip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
+alias ssl='certbot certonly --webroot --agree-tos --text --non-interactive --webroot-path /var/www/html -d'
+alias wg0="sudo wg-quick down wg1; sudo wg-quick up wg0"
+alias wg1="sudo wg-quick down wg0; sudo wg-quick up wg1"
+
 cht(){ curl cht.sh/$1 }
 mkcd(){ mkdir $1;cd $1 }
 
@@ -17,6 +21,7 @@ alias pgp="pass git push"
 
 
 # shortcuts
+alias m='neomutt'
 alias sk='screenkey -s small --opacity 0.1 &'
 alias t='tree -I ".git" -a'
 alias h="history"
@@ -25,7 +30,7 @@ alias vf='vim $(fzf)'
 alias f="ranger"
 
 # configs
-alias sp="source ~/.profile"
+alias sp="source ~/.myprofile"
 alias vrc="vim ~/.vimrc"
 alias ho="sudo vim /etc/hosts"
 

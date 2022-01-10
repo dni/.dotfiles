@@ -64,15 +64,14 @@ uninstall_console() {
 
 install_server() {
   echo "installing server..."
+  stow profile
   install_console
-  stow aliases
   echo "done!"
 }
 
 install() {
   echo "installing all..."
   stow profile
-  stow aliases
   install_console
   echo "done!"
 }
