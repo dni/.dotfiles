@@ -3,14 +3,6 @@
 install_vim() {
   echo "installing vim"
   stow vim
-  ## manual installation not needed, its automatic in vimrc
-  # if [ -e ~/.vim/autoload/plug.vim ]; then
-  #   echo "plug.vim already installed"
-  # else
-  #   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  #     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 2>/dev/null
-  # fi
-  #vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 }
 
 uninstall_vim() {
@@ -46,6 +38,26 @@ install_tmux() {
 uninstall_tmux() {
   echo "uninstalling tmux"
   stow -D tmux 2> /dev/null
+}
+
+install_irc() {
+  echo "installing irc"
+  cd ~/.dotfiles/irc/.irssi/
+  wget https://irssi-import.github.io/themes/oscar.theme
+  mkdir -p scripts/autorun
+  cd scripts/autorun
+  wget https://scripts.irssi.org/scripts/dr_who.pl
+  wget https://scripts.irssi.org/scripts/mouse.pl
+  wget https://scripts.irssi.org/scripts/notify.pl
+  wget https://scripts.irssi.org/scripts/autowhois.pl
+  stow irc
+}
+
+uninstall_irc() {
+  echo "uninstalling irc..."
+  stow -D irc 2> /dev/null
+  rm -rf ~/.dotfiles/irc/.irssi/scripts
+  rm -f ~/.dotfiles/irc/.irssi/oscar.theme
 }
 
 install_console() {

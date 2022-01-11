@@ -41,18 +41,20 @@ nnoremap <SPACE> <Nop>
 let mapleader = " "
 
 " good practice
-" map <up> <nop>
-" map <down> <nop>
-" map <left> <nop>
-" map <right> <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
-" imap <up> <nop>
-" imap <down> <nop>
-" imap <left> <nop>
-" imap <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
 " own config binds
-"
+nmap n nzz
+nmap * *zz
+nmap Y y$
 nmap <leader><cr> :term<CR>
 nmap <leader>t :TagbarToggle<CR>
 " no highlights
@@ -61,6 +63,7 @@ nmap <leader>h :nohl<CR>
 nmap <leader>c gcc
 " code format everything
 nmap <leader>f gg=G
+nmap <leader>fc gg=G
 
 " maximizer
 nnoremap <leader>m :MaximizerToggle<CR>
@@ -71,14 +74,12 @@ nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>dd :call vimspector#Launch()<CR>
 nnoremap <leader>dq :call vimspector#Reset()<CR>
 nnoremap <leader>d<space> :call vimspector#Continue()<CR>
-
 nnoremap <leader>dc :call win_gotoid(g:vimspector_session_windows.code)<CR>
 nnoremap <leader>dt :call win_gotoid(g:vimspector_session_windows.tagpage)<CR>
 nnoremap <leader>dv :call win_gotoid(g:vimspector_session_windows.variables)<CR>
 nnoremap <leader>dw :call win_gotoid(g:vimspector_session_windows.watches)<CR>
 nnoremap <leader>ds :call win_gotoid(g:vimspector_session_windows.stack_trace)<CR>
 nnoremap <leader>do :call win_gotoid(g:vimspector_session_windows.output)<CR>
-
 nmap <leader>dh <Plug>VimspectorStepOver
 nmap <leader>dj <Plug>VimspectorStepInto
 nmap <leader>dk <Plug>VimspectorStepOut
@@ -87,6 +88,8 @@ nmap <leader>dr <Plug>VimspectorRestart
 nmap <leader>db <Plug>VimspectorToggleBreakpoint
 nmap <leader>dbc <Plug>VimspectorToggleConditionalBreakpoint
 
+
+" save and exits
 nmap <C-x> :q<CR>
 nmap <C-x><C-x> :q!<CR>
 nmap <C-y> :w<CR>
