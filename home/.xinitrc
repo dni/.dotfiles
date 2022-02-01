@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
-#source /etc/profile.d/dni.sh
-xinit_hook & # defined in script/utils.sh
+source ~/.myprofile
+xinit_hook & # defined in ~/scripts/userspace/utils.sh
 sxhkd & # keybinds daemon .config/sxhkd/
 dunst & # notification daemon
 compton & # composite manager

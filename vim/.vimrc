@@ -21,7 +21,7 @@ Plug 'vim-python/python-syntax'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-journal'
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'morhetz/gruvbox'

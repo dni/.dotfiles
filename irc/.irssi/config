@@ -35,8 +35,12 @@ channels = (
   { name = "#dnilabs"; chatnet = "dnilabs"; autojoin = "yes"; },
   { name = "#hostinghelden"; chatnet = "dnilabs"; autojoin = "yes"; },
   { name = "#dnilabs"; chatnet = "hostinghelden"; autojoin = "yes"; },
-  { name = "#hostinghelden"; chatnet = "hostinghelden"; autojoin = "yes"; },
-  { name = "#sxmo"; chatnet = "OFTC"; autojoin = "yes"; },
+  {
+    name = "#hostinghelden";
+    chatnet = "hostinghelden";
+    autojoin = "yes";
+  },
+  { name = "#sxmo"; chatnet = "OFTC"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -216,6 +220,6 @@ settings = {
   "fe-common/core" = { theme = "oscar"; };
   "perl/core/scripts" = { awl_shared_sbar = "OFF"; awl_viewer = "no"; };
 };
-keyboard = (
+keyboard = ( 
   { key = "meta-[M"; id = "command"; data = "mouse_xterm "; }
 );

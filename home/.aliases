@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
-## aliases
-alias mysqlshow="ls -n ~/.my.cnf"
-
 # shortcuts
 alias p="sudo pacman"
+alias m='neomutt'
+alias sk='screenkey -s small --opacity 0.1 &'
+alias i="irssi"
+alias f="ranger"
 
 # cli apps
 alias m="mutt"
@@ -19,3 +20,7 @@ alias q3='~/ioquake3/quake3e.x64 +set fs_game cpma +connect'
 # jekyll blog
 alias blogbuild="bundle exec jekyll build"
 alias blogserve="bundle exec jekyll serve"
+
+# switch wireguard connection
+alias wg0="sudo wg-quick down wg1; sudo wg-quick up wg0"
+alias wg1="sudo wg-quick down wg0; sudo wg-quick up wg1"

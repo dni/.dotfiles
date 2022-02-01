@@ -4,6 +4,7 @@
 . "$SCRIPTS"/userspace/audio.sh
 . "$SCRIPTS"/userspace/dmenu.sh
 . "$SCRIPTS"/userspace/status.sh
+. "$SCRIPTS"/userspace/tmux.sh
 . "$SCRIPTS"/devtools/typo3.sh
 . "$SCRIPTS"/devtools/magento2.sh
 . "$SCRIPTS"/devtools/webserver.sh
