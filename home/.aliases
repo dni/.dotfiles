@@ -7,10 +7,6 @@ alias sk='screenkey -s small --opacity 0.1 &'
 alias i="irssi"
 alias f="ranger"
 
-# cli apps
-alias m="mutt"
-alias i="irssi"
-
 # notifications
 alias notify='dunstify'
 

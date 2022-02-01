@@ -7,7 +7,6 @@ compton & # composite manager
 
 # open apps
 firefox &
-thunderbird &
 discord &
 signal-desktop &
 telegram-desktop &
