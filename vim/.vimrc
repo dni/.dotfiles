@@ -140,6 +140,12 @@ set tabstop=2
 retab
 set shiftwidth=2
 
+" copy & paste systemwide
+noremap <leader>y "*y
+noremap <leader>p "*p
+noremap <leader>Y "+y
+noremap <leader>P "+p"
+
 " remove trailing whitespace before saving
 autocmd BufWritePre * :%s/\s\+$//e
 
