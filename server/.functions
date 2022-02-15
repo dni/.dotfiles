@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-. ~/scripts/devtools/typo3.sh
-. ~/scripts/devtools/magento2.sh
-. ~/scripts/devtools/webserver.sh
-. ~/scripts/devtools/mysql.sh
+. ~/.dotfiles/server/typo3.sh
+. ~/.dotfiles/server/magento2.sh
+. ~/.dotfiles/server/webserver.sh
+. ~/.dotfiles/server/mysql.sh
