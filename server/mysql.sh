@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+
 # create database and user
  mysqlcreate() {
   [[ -z $1 ]] && echo missing argument database && return

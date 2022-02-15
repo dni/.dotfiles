@@ -76,6 +76,7 @@ uninstall_console() {
 install_server() {
   echo "installing server..."
   stow profile
+  stow server
   install_console
   echo "done!"
 }
