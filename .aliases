@@ -20,6 +20,7 @@ alias t='tree -I ".git" -a'
 alias h="history"
 alias v="vim"
 alias vf='vim $(fzf)'
+alias tf='tail -f'
 
 # configs
 alias sp="source ~/.myprofile"
