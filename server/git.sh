@@ -2,13 +2,13 @@
 create_repository() {
   if [ -z $1 ]; then
     echo "missing argument repository name."
-    exit 1
+    return 1
   fi
   dir=/home/git/
   repo=$dir$1.git
   if [ -e $repo ]; then
     echo "$repo already exists."
-    exit 1
+    return 1
   fi
   mkdir $repo
   cd $repo
