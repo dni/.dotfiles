@@ -3,3 +3,4 @@
 . ~/.dotfiles/server/magento2.sh
 . ~/.dotfiles/server/webserver.sh
 . ~/.dotfiles/server/mysql.sh
+. ~/.dotfiles/server/git.sh
