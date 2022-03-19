@@ -4,8 +4,12 @@ alias smysqldump="mysqldump --single-transaction --quick --lock-tables=false"
 alias myip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
 alias ssl='certbot certonly --webroot --agree-tos --text --non-interactive --webroot-path /var/www/html -d'
 
-cht(){ curl cht.sh/$1 }
-mkcd(){ mkdir $1;cd $1 }
+cht(){
+  curl cht.sh/$1
+}
+mkcd(){
+  mkdir $1;cd $1
+}
 
 # git
 alias gac="git add -A && git commit -am"

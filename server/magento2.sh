@@ -8,6 +8,7 @@ alias m2module="bin/magento module:status"
 alias m2enmodule="bin/magento module:enable"
 alias m2dismodule="bin/magento module:disable"
 alias m2di="bin/magento setup:di:compile"
+alias m2static="bin/magento setup:static-content:deploy"
 alias m2disetup="bin/magento setup:upgrade;bin/magento setup:di:compile"
 
 m2rm() {
