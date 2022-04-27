@@ -6,7 +6,7 @@
   [[ -z $1 ]] && echo missing argument database && return
   [[ -z $2 ]] && echo missing argument username && return
   [[ -z $3 ]] && echo missing argument password && return
-  local template=~/scripts/templates/create.sql
+  local template=~/scripts/server/templates/create.sql
   local query=$(sed -e "s/%name%/$1/g" -e "s/%user%/$2/g" -e "s/%pw%/$3/g" $template)
   mysql -e "$query"
 }
