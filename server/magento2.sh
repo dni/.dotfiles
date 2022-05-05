@@ -22,8 +22,8 @@ m2domainlocal() {
   bin/magento config:set "web/secure/use_in_adminhtml" 0
   bin/magento config:set "web/unsecure/base_url" "http://dev.$1:8082/"
   bin/magento config:set "web/secure/base_url" "http://dev.$1:8082/"
-  bin/magento config:set "web/unsecure/base_static_url" "{{unsecure_base_url}}/pub/static/"
-  bin/magento config:set "web/secure/base_static_url" "{{unsecure_base_url}}/pub/static/"
+  bin/magento config:set "web/unsecure/base_static_url" "{{unsecure_base_url}}pub/static/"
+  bin/magento config:set "web/secure/base_static_url" "{{unsecure_base_url}}pub/static/"
 }
 
 m2fetch() {
