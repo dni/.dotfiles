@@ -91,3 +91,20 @@ m2createclean(){
   php bin/magento magesetup:setup:run at
   php bin/magento cache:enable
 }
+
+m2deployadmin(){
+  bin/magento setup:static-content:deploy de_DE -a adminhtml -f
+  aws s3 sync pub/static/adminhtml s3://$(cat .bucket)/static/adminhtml
+  aws cloudfront create-invalidation --distribution-id $(cat .cloudfront) --paths /static/adminhtml/\*
+}
+
+m2deployfrontend(){
+  if [ -e ".languages" ]; then
+    l18n=$(cat .languages)
+  else
+    l18n="de_DE"
+  fi
+  bin/magento setup:static-content:deploy $l18n -t $(cat .template) -a frontend --no-parent -f
+  aws s3 sync pub/static/frontend s3://$(cat .bucket)/static/frontend
+  aws cloudfront create-invalidation --distribution-id $(cat .cloudfront) --paths /static/frontend/\*
+}
