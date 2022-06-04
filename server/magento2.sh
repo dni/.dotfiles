@@ -108,3 +108,8 @@ m2deployfrontend(){
   aws s3 sync pub/static/frontend s3://$(cat .bucket)/static/frontend
   aws cloudfront create-invalidation --distribution-id $(cat .cloudfront) --paths /static/frontend/\*
 }
+
+m2deploy(){
+  m2deployadmin
+  m2deployfrontend
+}
