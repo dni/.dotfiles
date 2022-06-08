@@ -100,11 +100,10 @@ m2deployadmin(){
 
 m2deployfrontend(){
   if [ -e ".languages" ]; then
-    l18n=$(cat .languages)
+    bin/magento setup:static-content:deploy -t $(cat .template) -a frontend --no-parent -f $(cat .languages)
   else
-    l18n="de_DE"
+    bin/magento setup:static-content:deploy -t $(cat .template) -a frontend --no-parent -f de_DE
   fi
-  bin/magento setup:static-content:deploy $l18n -t $(cat .template) -a frontend --no-parent -f
   aws s3 sync pub/static/frontend s3://$(cat .bucket)/static/frontend
   aws cloudfront create-invalidation --distribution-id $(cat .cloudfront) --paths /static/frontend/\*
 }
