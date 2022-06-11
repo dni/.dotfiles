@@ -93,6 +93,7 @@ m2createclean(){
 }
 
 m2deployadmin(){
+  setopt localoptions rmstarsilent
   rm -rf pub/static/adminhtml/*
   bin/magento setup:static-content:deploy de_DE -a adminhtml -f
   aws s3 sync pub/static/adminhtml s3://$(cat .bucket)/static/adminhtml
@@ -100,6 +101,7 @@ m2deployadmin(){
 }
 
 m2deployfrontend(){
+  setopt localoptions rmstarsilent
   rm -rf pub/static/frontend/*
   if [ -e ".languages" ]; then
     bin/magento setup:static-content:deploy -t $(cat .template) -a frontend --no-parent -f $(cat .languages)
