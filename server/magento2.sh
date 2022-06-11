@@ -93,12 +93,14 @@ m2createclean(){
 }
 
 m2deployadmin(){
+  rm -rf pub/static/adminhtml/*
   bin/magento setup:static-content:deploy de_DE -a adminhtml -f
   aws s3 sync pub/static/adminhtml s3://$(cat .bucket)/static/adminhtml
   aws cloudfront create-invalidation --distribution-id $(cat .cloudfront) --paths /static/adminhtml/\*
 }
 
 m2deployfrontend(){
+  rm -rf pub/static/frontend/*
   if [ -e ".languages" ]; then
     bin/magento setup:static-content:deploy -t $(cat .template) -a frontend --no-parent -f $(cat .languages)
   else
