@@ -13,6 +13,7 @@ Plug 'groenewege/vim-less'
 Plug 'elzr/vim-json'
 Plug 'bling/vim-airline'
 Plug 'pangloss/vim-javascript'
+Plug 'geekjuice/vim-mocha'
 Plug 'plasticboy/vim-markdown'
 Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
@@ -88,6 +89,12 @@ nmap <leader>dl <Plug>VimspectorRunToCursor
 nmap <leader>dr <Plug>VimspectorRestart
 nmap <leader>db <Plug>VimspectorToggleBreakpoint
 nmap <leader>dbc <Plug>VimspectorToggleConditionalBreakpoint
+
+" mocha test runner
+map <Leader>tt :call RunCurrentSpecFile()<CR>
+map <Leader>ts :call RunNearestSpec()<CR>
+map <Leader>tl :call RunLastSpec()<CR>
+map <Leader>ta :call RunAllSpecs()<CR>
 
 
 " save and exits
