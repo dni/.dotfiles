@@ -20,6 +20,7 @@ Plug 'othree/html5.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'preservim/tagbar'
 Plug 'vim-python/python-syntax'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-journal'
@@ -64,7 +65,6 @@ nmap <leader>h :nohl<CR>
 " comment
 nmap <leader>c gcc
 " code format everything
-nmap <leader>f gg=G
 nmap <leader>fc gg=G
 
 " maximizer
@@ -127,6 +127,11 @@ nnoremap <leader>fr :Rg<CR>
 nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>fm :Marks<CR>
 nnoremap <leader>ft :Tags<CR>
+
+" prettier
+nmap <Leader>fp <Plug>(Prettier)
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 
 set noswapfile
