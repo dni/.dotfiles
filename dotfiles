@@ -1,5 +1,15 @@
 #!/bin/sh
 
+install_nvim() {
+  echo "installing nvim"
+  stow nvim
+}
+
+uninstall_nvim() {
+  echo "uninstalling nvim"
+  stow -D nvim 2> /dev/null
+}
+
 install_vim() {
   echo "installing vim"
   stow vim

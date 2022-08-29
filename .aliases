@@ -22,8 +22,8 @@ alias pgp="pass git push"
 # shortcuts
 alias t='tree -I ".git" -a'
 alias h="history"
-alias v="vim"
-alias vf='vim $(fzf)'
+alias v="nvim"
+alias vf='nvim $(fzf)'
 alias tf='tail -f'
 
 # configs
