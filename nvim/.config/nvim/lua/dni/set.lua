@@ -25,3 +25,5 @@ vim.opt.cmdheight = 1
 vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
+
+vim.g.python_highlight_all = 1

@@ -12,7 +12,7 @@ return require("packer").startup(function()
     -- Simple plugins can be specified as strings
     use("TimUntersberger/neogit")
 
-
+    use {'neoclide/coc.nvim', branch = 'release'}
 
     -- All the things
     use("neovim/nvim-lspconfig")
@@ -33,6 +33,15 @@ return require("packer").startup(function()
     -- })
 
     -- dni
+    use ("xolox/vim-misc")
+    use ("xolox/vim-easytags")
+    use ("preservim/tagbar")
+
+    use ("tpope/vim-fugitive")
+    use ("tpope/vim-surround")
+    use ("tpope/vim-commentary")
     use ("vim-airline/vim-airline")
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use ("vim-python/python-syntax")
+    use ("mattn/emmet-vim")
 end)

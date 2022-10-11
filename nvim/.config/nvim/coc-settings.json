@@ -1,0 +1,6 @@
+{
+    "python.linting.mypyEnabled": true,
+    "python.formatting.provider": "black",
+    "pyright.organizeimports.provider": "isort",
+    "suggest.noselect": true
+}
