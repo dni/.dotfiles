@@ -1,11 +1,12 @@
 {
     "configurations": {
-        "Python Attach": {
-            "adapter": "multi-session",
+        "uvicorn": {
+            "adapter": "debugpy",
             "filetypes": [ "python" ],
             "variables": {
-                "host": "localhost",
-                "port": 5678
+                "venv": {
+                    "shell": ["poetry", "env", "info", "-p"]
+                }
             },
             "breakpoints": {
                 "exception": {
@@ -15,11 +16,13 @@
                 }
             },
             "configuration": {
-                "request": "attach",
-                "pathMappings": [{
-                    "localRoot": "${workspaceRoot}",
-                    "remoteRoot": "${workspaceRoot}"
-                }]
+                "name": "uvicorn",
+                "type": "python",
+                "request": "launch",
+                "cwd": "${workspaceRoot}",
+                "python": "${venv}/bin/python",
+                "debugOptions": [],
+                "program": "server.py"
             }
         }
     }
