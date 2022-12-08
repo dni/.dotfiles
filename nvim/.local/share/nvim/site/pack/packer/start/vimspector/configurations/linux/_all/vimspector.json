@@ -1,6 +1,6 @@
 {
     "configurations": {
-        "uvicorn": {
+        "lnbits": {
             "adapter": "debugpy",
             "filetypes": [ "python" ],
             "variables": {
@@ -19,10 +19,10 @@
                 "name": "uvicorn",
                 "type": "python",
                 "request": "launch",
-                "cwd": "${workspaceRoot}",
+                "cwd": "${cwd}",
                 "python": "${venv}/bin/python",
                 "debugOptions": [],
-                "program": "server.py"
+                "program": "${cwd}/lnbits/server.py"
             }
         }
     }
