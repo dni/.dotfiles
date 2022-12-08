@@ -1,26 +1,25 @@
 {
     "configurations": {
-        "Python Launch": {
-            "adapter": "debugpy",
+        "Python Attach": {
+            "adapter": "multi-session",
             "filetypes": [ "python" ],
-            "configuration": {
-                "name": "Python: Launch",
-                "type": "python",
-                "request": "launch",
-                "cwd": "${workspaceRoot}",
-                "debugOptions": [],
-                "program": "main.py"
+            "variables": {
+                "host": "localhost",
+                "port": 5678
             },
-            "Python Attach": {
-                "adapter": "multi-session",
-                "filetypes": [ "python" ],
-                "configuration": {
-                    "request": "attach",
-                    "pathMappings": [{
-                        "localRoot": "${workspaceRoot}",
-                        "remoteRoot": "${workspaceRoot}"
-                    }]
+            "breakpoints": {
+                "exception": {
+                    "raised": "N",
+                    "uncaught": "Y",
+                    "userUnhandled": "N"
                 }
+            },
+            "configuration": {
+                "request": "attach",
+                "pathMappings": [{
+                    "localRoot": "${workspaceRoot}",
+                    "remoteRoot": "${workspaceRoot}"
+                }]
             }
         }
     }
