@@ -4,6 +4,7 @@ xinit_hook & # defined in ~/scripts/userspace/utils.sh
 sxhkd & # keybinds daemon .config/sxhkd/
 dunst & # notification daemon
 compton & # composite manager
+xsettingsd & # settings manager
 
 # open apps
 firefox &

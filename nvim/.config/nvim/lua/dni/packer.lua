@@ -28,15 +28,16 @@ return require("packer").startup(function()
     -- Colorscheme section
     use("gruvbox-community/gruvbox")
 
-    -- use("nvim-treesitter/nvim-treesitter", {
-    --     run = ":TSUpdate"
-    -- })
+    use("nvim-treesitter/nvim-treesitter", {
+        run = ":TSUpdate"
+    })
 
     -- dni
     use ("xolox/vim-misc")
     use ("xolox/vim-easytags")
     use ("preservim/tagbar")
 
+    use ("puremourning/vimspector")
     use ("tpope/vim-fugitive")
     use ("tpope/vim-surround")
     use ("tpope/vim-commentary")

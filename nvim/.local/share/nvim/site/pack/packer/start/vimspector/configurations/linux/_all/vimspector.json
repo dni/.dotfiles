@@ -1,0 +1,27 @@
+{
+    "configurations": {
+        "Python Launch": {
+            "adapter": "debugpy",
+            "filetypes": [ "python" ],
+            "configuration": {
+                "name": "Python: Launch",
+                "type": "python",
+                "request": "launch",
+                "cwd": "${workspaceRoot}",
+                "debugOptions": [],
+                "program": "main.py"
+            },
+            "Python Attach": {
+                "adapter": "multi-session",
+                "filetypes": [ "python" ],
+                "configuration": {
+                    "request": "attach",
+                    "pathMappings": [{
+                        "localRoot": "${workspaceRoot}",
+                        "remoteRoot": "${workspaceRoot}"
+                    }]
+                }
+            }
+        }
+    }
+}
