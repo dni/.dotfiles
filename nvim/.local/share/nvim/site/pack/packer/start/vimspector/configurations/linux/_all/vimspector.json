@@ -22,7 +22,7 @@
                 "cwd": "${cwd}",
                 "python": "${venv}/bin/python",
                 "debugOptions": [],
-                "program": "${cwd}/lnbits/server.py"
+                "module": "lnbits.server"
             }
         }
     }

@@ -12,10 +12,19 @@ nnoremap("<leader>t", ":TagbarToggle<CR>")
 -- navigate through windows
 nnoremap("<C-l>", "<C-w><C-w>")
 nnoremap("<C-h>", "<C-w>h")
+
 -- navigate through buffers
 nnoremap("<C-k>", ":bnext<cr>")
 nnoremap("<C-j>", ":bprevious<cr>")
 
+
+-- transform splits
+nnoremap("<C-M-h>", "<C-w>>")
+nnoremap("<C-M-l>", "<C-w><")
+nnoremap("<C-M-j>", "<C-w>+")
+nnoremap("<C-M-k>", "<C-w>-")
+
+nnoremap("<leader>m", "<C-w>_<C-w>|")
 
 -- coc binds
 nnoremap("<leader>cc", ":CocCommand<CR>")
