@@ -63,3 +63,6 @@ nnoremap("<leader>dv", ":call win_gotoid(g:vimspector_session_windows.variables)
 nnoremap("<leader>dw", ":call win_gotoid(g:vimspector_session_windows.watches)<CR>")
 nnoremap("<leader>ds", ":call win_gotoid(g:vimspector_session_windows.stack_trace)<CR>")
 nnoremap("<leader>do", ":call win_gotoid(g:vimspector_session_windows.output)<CR>")
+
+-- undo
+nnoremap("<leader>u", ":UndotreeToggle<CR>")

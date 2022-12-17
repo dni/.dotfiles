@@ -16,14 +16,6 @@ return require("packer").startup(function()
 
     -- All the things
     use("neovim/nvim-lspconfig")
-    -- use("hrsh7th/cmp-nvim-lsp")
-    -- use("hrsh7th/cmp-buffer")
-    -- use("hrsh7th/nvim-cmp")
-    -- use("tzachar/cmp-tabnine", { run = "./install.sh" })
-    -- use("onsails/lspkind-nvim")
-    -- use("nvim-lua/lsp_extensions.nvim")
-    -- use("glepnir/lspsaga.nvim")
-    -- use("simrat39/symbols-outline.nvim")
 
     -- Colorscheme section
     use("gruvbox-community/gruvbox")
@@ -36,6 +28,7 @@ return require("packer").startup(function()
     use ("xolox/vim-misc")
     use ("xolox/vim-easytags")
     use ("preservim/tagbar")
+    use ("mbbill/undotree")
 
     use ("puremourning/vimspector")
     use ("tpope/vim-fugitive")
