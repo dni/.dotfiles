@@ -28,6 +28,7 @@ Plug 'junegunn/vim-journal'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'morhetz/gruvbox'
+Plug 'github/copilot.vim'
 " Plug 'tomasr/molokai'
 call plug#end()
 
