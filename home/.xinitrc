@@ -3,12 +3,13 @@ source ~/.myprofile
 xinit_hook & # defined in ~/scripts/userspace/utils.sh
 sxhkd & # keybinds daemon .config/sxhkd/
 dunst & # notification daemon
-compton & # composite manager
+xcompmgr -o .66 & # composite manager
 xsettingsd & # settings manager
 
 # open apps
 firefox &
 discord &
+elements-desktop &
 signal-desktop &
 telegram-desktop &
 pavucontrol &
