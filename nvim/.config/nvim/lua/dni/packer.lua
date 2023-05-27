@@ -38,4 +38,5 @@ return require("packer").startup(function()
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use ("vim-python/python-syntax")
     use ("mattn/emmet-vim")
+    use ("github/copilot.vim")
 end)

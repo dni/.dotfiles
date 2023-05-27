@@ -6,6 +6,7 @@ alias m='neomutt'
 alias sk='screenkey -s small --opacity 0.1 &'
 alias i="irssi"
 alias f="ranger"
+alias lg="lazygit"
 
 # notifications
 alias notify='dunstify'
