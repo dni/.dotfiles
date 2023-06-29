@@ -1,3 +1,6 @@
 .netrwhist
 .DS_Store
 install.sh
+
+home/.config/mutt/*
+!home/.config/mutt/colors.mutt
