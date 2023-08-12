@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/dni/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/dni/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/dni/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -183,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dni/.local/share/nvim/site/pack/packer/start/vimspector",
     url = "https://github.com/puremourning/vimspector"
+  },
+  vimspectorpy = {
+    loaded = true,
+    path = "/home/dni/.local/share/nvim/site/pack/packer/start/vimspectorpy",
+    url = "https://github.com/sagi-z/vimspectorpy"
   }
 }
 

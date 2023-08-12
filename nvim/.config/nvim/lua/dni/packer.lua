@@ -21,7 +21,7 @@ return require("packer").startup(function()
     use("gruvbox-community/gruvbox")
 
     use("nvim-treesitter/nvim-treesitter", {
-        run = ":TSUpdate"
+        run = "TSUpdate"
     })
 
     -- dni
@@ -31,6 +31,7 @@ return require("packer").startup(function()
     use ("mbbill/undotree")
 
     use ("puremourning/vimspector")
+    use { "sagi-z/vimspectorpy", run = "VimspectorpyUpdate" }
     use ("tpope/vim-fugitive")
     use ("tpope/vim-surround")
     use ("tpope/vim-commentary")

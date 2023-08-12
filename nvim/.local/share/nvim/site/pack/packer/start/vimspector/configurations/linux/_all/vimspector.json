@@ -1,5 +1,30 @@
 {
     "configurations": {
+        "pytest": {
+            "adapter": "debugpy",
+            "filetypes": [ "python" ],
+            "variables": {
+                "venv": {
+                    "shell": ["poetry", "env", "info", "-p"]
+                }
+            },
+            "breakpoints": {
+                "exception": {
+                    "raised": "Y",
+                    "uncaught": "Y",
+                    "userUnhandled": "Y"
+                }
+            },
+            "configuration": {
+                "name": "pytest",
+                "type": "python",
+                "request": "launch",
+                "cwd": "${cwd}",
+                "python": "${venv}/bin/python",
+                "debugOptions": [],
+                "program": "${venv}/bin/pytest"
+            }
+        },
         "lnbits": {
             "adapter": "debugpy",
             "filetypes": [ "python" ],

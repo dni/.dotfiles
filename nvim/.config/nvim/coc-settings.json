@@ -1,7 +1,8 @@
 {
     "python.linting.mypyEnabled": true,
+    "python.linting.ruffEnabled": true,
     "python.formatting.provider": "black",
-    "pyright.organizeimports.provider": "isort",
+    "pyright.organizeimports.provider": "ruff",
     "suggest.noselect": true,
     "languageserver": {
       "ccls": {
