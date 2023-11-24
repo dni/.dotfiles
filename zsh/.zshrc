@@ -1,4 +1,7 @@
 #!/bin/zsh
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 ZSH_THEME="essembeh"
 #ZSH_THEME="candy"
 export ZSH=~/.oh-my-zsh

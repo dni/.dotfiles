@@ -5,13 +5,13 @@
     "pyright.organizeimports.provider": "ruff",
     "suggest.noselect": true,
     "languageserver": {
-      "ccls": {
-        "command": "ccls",
-        "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-        "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "clangd": {
+        "command": "clangd",
+        "filetypes": ["h", "c", "cc", "cpp", "c++", "objc", "objcpp"],
+        "rootPatterns": ["compile_commands.json", ".git/", ".hg/", ".clang-tidy", ".clang-format"],
         "initializationOptions": {
             "cache": {
-              "directory": "/tmp/ccls"
+              "directory": "/tmp/clangd"
             }
           }
       }

@@ -10,13 +10,14 @@
             },
             "breakpoints": {
                 "exception": {
-                    "raised": "Y",
-                    "uncaught": "Y",
-                    "userUnhandled": "Y"
+                    "raised": "N",
+                    "uncaught": "N",
+                    "userUnhandled": "N"
                 }
             },
             "configuration": {
                 "name": "pytest",
+                "args": [ "*${CommandLineArgs}" ],
                 "type": "python",
                 "request": "launch",
                 "cwd": "${cwd}",
