@@ -4,6 +4,7 @@ require("dni.telescope")
 
 vim.cmd("colorscheme gruvbox")
 vim.cmd("hi normal guibg=NONE ctermbg=NONE")
+vim.cmd("set clipboard=unnamedplus")
 
 -- remove trailing spaces on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
