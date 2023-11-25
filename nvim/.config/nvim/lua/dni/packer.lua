@@ -10,7 +10,7 @@ return require("packer").startup(function()
     use("nvim-telescope/telescope.nvim")
 
     -- Simple plugins can be specified as strings
-    use("TimUntersberger/neogit")
+    -- use("TimUntersberger/neogit")
 
     use {'neoclide/coc.nvim', branch = 'release'}
 
@@ -25,13 +25,13 @@ return require("packer").startup(function()
     })
 
     -- dni
-    use ("xolox/vim-misc")
-    use ("xolox/vim-easytags")
-    use ("preservim/tagbar")
-    use ("mbbill/undotree")
+    -- use ("xolox/vim-misc")
+    -- use ("xolox/vim-easytags")
+    -- use ("preservim/tagbar")
+    -- use ("mbbill/undotree")
 
     use ("puremourning/vimspector")
-    use { "sagi-z/vimspectorpy", run = "VimspectorpyUpdate" }
+    -- use { "sagi-z/vimspectorpy", run = "VimspectorpyUpdate" }
     use ("tpope/vim-fugitive")
     use ("tpope/vim-surround")
     use ("tpope/vim-commentary")
