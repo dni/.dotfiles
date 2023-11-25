@@ -7,6 +7,9 @@ super + o ; {f,t,n,p,g,i,s,d,q,r,m,h,v}
 super + s ; {w,l,b,s,i}
 	{weather,lnmticker,btcprice,status_update,externalip}
 
+super + c ; {i}
+	{dmenu_bolt11}
+
 super + q ; {x}
 	{die}
 

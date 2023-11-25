@@ -12,7 +12,7 @@ source ~/.myprofile
 xinit_hook & # defined in ~/scripts/userspace/utils.sh
 sxhkd & # keybinds daemon .config/sxhkd/
 dunst & # notification daemon
-xcompmgr -o .66 & # composite manager
+xcompmgr -o .70 & # composite manager
 xsettingsd & # settings manager
 
 # open apps

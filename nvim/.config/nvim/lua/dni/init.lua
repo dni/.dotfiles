@@ -16,3 +16,4 @@ vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
 vim.g.python3_host_prog = "/usr/bin/python3"
+vim.g.vimspector_base_dir='/home/dni/.local/share/nvim/site/pack/packer/start/vimspector'
