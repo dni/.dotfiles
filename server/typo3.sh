@@ -14,6 +14,7 @@ typo3deploy() {
   ./vendor/bin/typo3cms install:fixfolderstructure
   ./vendor/bin/typo3cms database:updateschema
   ./vendor/bin/typo3cms upgrade:run all
+  ./vendor/bin/typo3cms cache:flush all
 }
 
 # create apache2 vhost
