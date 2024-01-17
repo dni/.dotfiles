@@ -1,23 +1,43 @@
 #!/usr/bin/env sh
 
-typo3clone() {
+typo3deploy() {
   if [ -z "$1" ]; then
     echo missing argument name
-    exit
+    return
   fi
-  if [ -z "$2" ]; then
-    echo missing argument domain
-    exit
-  fi
-  projectclone "$1" typo3
-  cd /var/www/"$1" || exit
-  vhostcreate "$1" "$2" typo3
-  sudo service apache2 restart
-  mysqlselect local
-  mysqlcreatelocal "$1"
-  mysqlmigrate online local "$1"
-  git checkout v9
-  yarn
-  composer update
-  chown -R typo3:www-data /var/www/"$1"
+  echo "deploy"
+  target=/var/www/$1
+  [[ ! -d $target ]] && echo $1 does not exist. && return
+  cd $target
+  git pull
+  composer install
+  ./vendor/bin/typo3cms install:fixfolderstructure
+  ./vendor/bin/typo3cms database:updateschema
+  ./vendor/bin/typo3cms upgrade:run all
+  chown -R typo3:www-data /var/www/$1
+}
+
+# create apache2 vhost
+ vhostcreate() {
+  [[ -z $1 ]] && echo "missing argument name" && return
+  [[ -z $2 ]] && echo "missing argument domain" && return
+  target=/etc/apache2/sites-available/$1.conf
+  [[ -f $target ]] && echo vhost does exist. && return
+  sudo tee $target <<EOF
+<VirtualHost *:80>
+  DirectoryIndex index.html index.php
+  ServerName www.$2
+  ServerAlias $2
+  DocumentRoot /var/www/$1/public
+  LogLevel info
+  ErrorLog /var/log/apache2/$1.log
+  CustomLog /var/log/apache2/$1-access.log combined
+  <Directory "/var/www/$1/public/">
+    Options FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+EOF
 }
