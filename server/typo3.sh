@@ -14,7 +14,6 @@ typo3deploy() {
   ./vendor/bin/typo3cms install:fixfolderstructure
   ./vendor/bin/typo3cms database:updateschema
   ./vendor/bin/typo3cms upgrade:run all
-  chown -R typo3:www-data /var/www/$1
 }
 
 # create apache2 vhost
