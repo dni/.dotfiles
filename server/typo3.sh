@@ -19,7 +19,7 @@ typo3deploy() {
 }
 
 # create apache2 vhost
- vhostcreate() {
+typo3vhostcreate() {
   [[ -z $1 ]] && echo "missing argument name" && return
   [[ -z $2 ]] && echo "missing argument domain" && return
   target=/etc/apache2/sites-available/$1.conf
