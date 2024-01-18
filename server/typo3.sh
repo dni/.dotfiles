@@ -13,6 +13,7 @@ typo3deploy() {
   composer install
   ./vendor/bin/typo3cms install:fixfolderstructure
   ./vendor/bin/typo3cms database:updateschema
+  ./vendor/bin/typo3cms upgrade:prepare
   ./vendor/bin/typo3cms upgrade:run all
   ./vendor/bin/typo3cms cache:flush all
 }
