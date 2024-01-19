@@ -26,9 +26,12 @@ typo3vhostcreate() {
   [[ -f $target ]] && echo vhost does exist. && return
   sudo tee $target <<EOF
 <VirtualHost *:80>
+  ServerAlias $2
+  Redirect permanent / http://www.$2
+</VirtualHost>
+<VirtualHost *:80>
   DirectoryIndex index.html index.php
   ServerName www.$2
-  ServerAlias $2
   DocumentRoot /var/www/$1/public
   LogLevel info
   ErrorLog /var/log/apache2/$1.log
