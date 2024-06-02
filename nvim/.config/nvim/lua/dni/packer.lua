@@ -12,6 +12,7 @@ return require("packer").startup(function()
     -- Simple plugins can be specified as strings
     -- use("TimUntersberger/neogit")
 
+    use {'ziglang/zig.vim'}
     use {'neoclide/coc.nvim', branch = 'release'}
 
     -- All the things
@@ -27,8 +28,8 @@ return require("packer").startup(function()
     -- dni
     -- use ("xolox/vim-misc")
     -- use ("xolox/vim-easytags")
-    -- use ("preservim/tagbar")
-    -- use ("mbbill/undotree")
+    use ("preservim/tagbar")
+    use ("mbbill/undotree")
 
     use ("puremourning/vimspector")
     -- use { "sagi-z/vimspectorpy", run = "VimspectorpyUpdate" }

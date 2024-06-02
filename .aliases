@@ -11,6 +11,17 @@ mkcd(){
   mkdir $1;cd $1
 }
 
+secret () {
+  gpg --encrypt --armor --output ${1}.enc -r $(cat ~/.pubkey) "${1}" && echo "${1} -> ${1}.enc"
+}
+
+reveal () {
+  gpg --decrypt --output ${1}.dec "${1}" && echo "${1} -> ${1}.dec"
+}
+
+#  gnupg
+alias secret="gpg --armor --encrypt"
+
 # git
 alias gac="git add -A && git commit -am"
 alias grh="git reset --hard"
