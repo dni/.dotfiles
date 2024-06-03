@@ -8,6 +8,11 @@ export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 [[ -e ~/.myprofile ]] && source ~/.myprofile
 
+# use gpg for ssh authentication
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 # zsh only aliases
 alias -g G='| grep'
 alias -g M='| more'
