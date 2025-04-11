@@ -1,31 +1,55 @@
 {
-    "python.linting.mypyEnabled": true,
-    "python.linting.ruffEnabled": true,
-    "python.formatting.provider": "black",
-    "pyright.organizeimports.provider": "ruff",
-    "suggest.noselect": true,
-    "zig.enabled": true,
-    "zig.startUpMessage": true,
-    "zig.path": "zls",
-    "zig.debugLog": false,
-    "languageserver": {
-        "clangd": {
-            "command": "clangd",
-            "filetypes": ["h", "c", "cc", "cpp", "c++", "objc", "objcpp"],
-            "rootPatterns": ["compile_commands.json", ".git/", ".hg/", ".clang-tidy", ".clang-format"],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/clangd"
-                }
-            }
-        },
-        "go": {
-          "command": "gopls",
-          "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
-          "filetypes": ["go"],
-          "initializationOptions": {
-              "usePlaceholders": true
+  "lua.enable": true,
+  "Lua.diagnostics.globals": ["vim", "use"],
+  "python.linting.mypyEnabled": true,
+  "python.linting.ruffEnabled": true,
+  "python.formatting.provider": "black",
+  "pyright.organizeimports.provider": "ruff",
+  "pyright.inlayHints.functionReturnTypes": true,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
+  "suggest.noselect": true,
+  "zig.enabled": true,
+  "zig.startUpMessage": true,
+  "zig.path": "zls",
+  "zig.debugLog": false,
+  "languageserver": {
+    "lua": {
+      "command": "lua-language-server",
+      "filetypes": ["lua"],
+      "rootPatterns": [".git/", ".hg/"],
+      "initializationOptions": {
+        "workspace": {
+          "library": {
+            "/usr/share/awesome/lib/?.lua": true,
+            "/usr/share/awesome/lib/?/init.lua": true
           }
         }
+      }
+    },
+    "clangd": {
+      "command": "clangd",
+      "filetypes": ["h", "c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [
+        "compile_commands.json",
+        ".git/",
+        ".hg/",
+        ".clang-tidy",
+        ".clang-format"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/clangd"
+        }
+      }
+    },
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
     }
+  }
 }

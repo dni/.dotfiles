@@ -1,26 +1,37 @@
-local Remap = require("dni.keymap")
-local nnoremap = Remap.nnoremap
+--vim.keymap.set('n', '<C-p>', ':Telescope find_files<CR>', { noremap = true })
 
---nnoremap("<C-p>", ":Telescope")
-
-nnoremap("<C-p>", function()
+vim.keymap.set('n', '<C-p>', function()
     require('telescope.builtin').find_files({ hidden = true })
-end)
-nnoremap("<C-g>", function()
+end,  { noremap = true })
+
+vim.keymap.set('n', '<leader>pf', function()
+    require('telescope.builtin').find_files({ hidden = true })
+end,  { noremap = true })
+
+vim.keymap.set('n', '<C-g>', function()
     require('telescope.builtin').live_grep({ hidden = true })
-end)
-nnoremap("<leader>pg", function()
+end,  { noremap = true })
+
+vim.keymap.set('n', '<leader>pg', function()
     require('telescope.builtin').git_files()
-end)
-nnoremap("<C-f>", function()
+end,  { noremap = true })
+
+vim.keymap.set('n', '<C-f>', function()
     require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})
-end)
-nnoremap("<leader>pw", function()
+end,  { noremap = true })
+
+vim.keymap.set('n', '<leader>pw', function()
     require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }
-end)
-nnoremap("<leader>pb", function()
+end,  { noremap = true })
+
+vim.keymap.set('n', '<leader>pb', function()
     require('telescope.builtin').buffers()
-end)
-nnoremap("<leader>vh", function()
+end,  { noremap = true })
+
+vim.keymap.set('n', '<C-b>', function()
+    require('telescope.builtin').buffers()
+end,  { noremap = true })
+
+vim.keymap.set('n', '<leader>vh', function()
     require('telescope.builtin').help_tags()
-end)
+end,  { noremap = true })
