@@ -39,7 +39,11 @@ alias tf='tail -f'
 
 # configs
 alias sp="source ~/.myprofile"
-alias vrc="vim ~/.vimrc"
+alias vrc="nvim ~/.config/nvim/lua/dni"
+alias vrci="nvim ~/.config/nvim/lua/dni/init.lua"
+alias vrcp="nvim ~/.config/nvim/lua/dni/packer.lua"
+alias vrck="nvim ~/.config/nvim/lua/dni/keymap.lua"
+alias zrc="nvim ~/.vimrc"
 alias ho="sudo vim /etc/hosts"
 
 # dir shortcuts

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/dni/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/home/dni/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/home/dni/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/home/dni/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/dni/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
+local package_path_str = "/home/dni/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/dni/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/dni/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/dni/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/dni/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/dni/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/dni/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/dni/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -123,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dni/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["python-syntax"] = {
-    loaded = true,
-    path = "/home/dni/.local/share/nvim/site/pack/packer/start/python-syntax",
-    url = "https://github.com/vim-python/python-syntax"
   },
   tagbar = {
     loaded = true,
@@ -148,11 +148,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dni/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/dni/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
   },
   ["vim-commentary"] = {
     loaded = true,

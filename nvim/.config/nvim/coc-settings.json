@@ -17,15 +17,7 @@
     "lua": {
       "command": "lua-language-server",
       "filetypes": ["lua"],
-      "rootPatterns": [".git/", ".hg/"],
-      "initializationOptions": {
-        "workspace": {
-          "library": {
-            "/usr/share/awesome/lib/?.lua": true,
-            "/usr/share/awesome/lib/?/init.lua": true
-          }
-        }
-      }
+      "rootPatterns": [".git/", ".hg/"]
     },
     "clangd": {
       "command": "clangd",

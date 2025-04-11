@@ -33,12 +33,14 @@ return require("packer").startup(function()
 
     use ("puremourning/vimspector")
     -- use { "sagi-z/vimspectorpy", run = "VimspectorpyUpdate" }
+    use 'nvim-tree/nvim-web-devicons'
     use ("tpope/vim-fugitive")
     use ("tpope/vim-surround")
     use ("tpope/vim-commentary")
     use ("vim-airline/vim-airline")
+    use ("vim-airline/vim-airline-themes")
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    use ("vim-python/python-syntax")
+    -- use ("vim-python/python-syntax")
     use ("mattn/emmet-vim")
     use ("github/copilot.vim")
 end)

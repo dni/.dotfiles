@@ -16,6 +16,3 @@ requires stow to manage to symlinks
 
 ## old dotfiles
 [old repository](https://github.com/dni/dotfiles)
-
-
-## notes
