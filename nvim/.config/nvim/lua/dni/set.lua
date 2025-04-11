@@ -33,3 +33,5 @@ vim.g['airline#extensions#tagbar#enabled'] = true
 vim.g['airline#extensions#tabline#enabled'] = true
 vim.g['airline#extensions#tabline#formatter '] = 'short_path'
 vim.g.airline_powerline_fonts = 1
+
+vim.g.copilot_enabled = 0
