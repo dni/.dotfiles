@@ -7,6 +7,8 @@ alias sk='screenkey -s small --opacity 0.1 &'
 alias i="irssi"
 alias f="ranger"
 alias lg="lazygit"
+alias lag="lazygit"
+alias lad="lazydocker"
 
 # notifications
 alias notify='dunstify'

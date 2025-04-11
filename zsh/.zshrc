@@ -21,6 +21,7 @@ alias -g T='| tail'
 alias -g H='| head'
 alias -g J='| jq'
 alias -g X='| xclip -selection clipboard'
+alias -g W='| wc -l'
 
 # enable vi mode
-# bindkey -v
+bindkey -v
