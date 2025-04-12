@@ -2,7 +2,7 @@
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>',  { noremap = true })
 vim.keymap.set('n', '<leader>q', '<cmd>quit<cr>',  { noremap = true })
 vim.keymap.set('n', '<leader>Q', '<cmd>qall!<cr>',  { noremap = true })
-vim.keymap.set('n', '<leader>f', '<cmd>Ex<cr>',  { noremap = true })
+vim.keymap.set('n', 'F', '<cmd>Ex<cr>',  { noremap = true })
 vim.keymap.set('n', '<leader><enter>', ':set splitbelow<CR> :split<CR> :terminal<CR> 10<C-w>_ i',  { noremap = true })
 vim.keymap.set('n', '<leader>t', '<cmd>TagbarToggle<cr>',  { noremap = true })
 vim.keymap.set('n', '<leader>u', '<cmd>UndotreeToggle<cr>',  { noremap = true })
