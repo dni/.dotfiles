@@ -19,7 +19,6 @@ return {
 	-- use {'neoclide/coc.nvim', branch = 'release'}
 
 	{ "neovim/nvim-lspconfig" },
-	{ "nvim-treesitter/nvim-treesitter", run = "TSUpdate" },
     { "preservim/tagbar" },
     { "mbbill/undotree" },
     { "puremourning/vimspector" },
@@ -29,10 +28,14 @@ return {
     { "tpope/vim-fugitive" },
     { "tpope/vim-surround" },
     { "tpope/vim-commentary" },
-    { 
-        "vim-airline/vim-airline",  
+    -- use ("vim-python/python-syntax")
+    { "mattn/emmet-vim" },
+	{ "github/copilot.vim" }
+
+    -- airline
+    {
+        "vim-airline/vim-airline",
         config = function()
-            -- fixes airline
             vim.cmd("hi statusline cterm=NONE gui=NONE")
             vim.cmd("hi statuslinenc cterm=NONE gui=NONE")
             vim.cmd("hi tabline cterm=NONE gui=NONE")
@@ -40,9 +43,5 @@ return {
         end
     },
     { "vim-airline/vim-airline-themes" },
-    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-    -- use ("vim-python/python-syntax")
-    { "mattn/emmet-vim" },
-	{ "github/copilot.vim" }
 
 }
