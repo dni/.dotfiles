@@ -4,7 +4,7 @@
   "emmet-vim": { "branch": "master", "commit": "6c511a8d7d2863066f32e25543e2bb99d505172c" },
   "gruvbox": { "branch": "master", "commit": "c2e10b3eff61ae96a27d741150e5fbcb2dd9c5b0" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "nvim-lspconfig": { "branch": "master", "commit": "5af60bbb835d5b6efdc64cdff2a5b27cde4120de" },
+  "nvim-lspconfig": { "branch": "master", "commit": "795ed3a50a02aa957f2b4d2138229292a7bdf354" },
   "nvim-treesitter": { "branch": "master", "commit": "684eeac91ed8e297685a97ef70031d19ac1de25a" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },

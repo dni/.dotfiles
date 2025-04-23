@@ -58,6 +58,7 @@ vim.keymap.set('n', '<leader>l', '<cmd>CocDiagnostics<cr>',  { noremap = true })
 vim.keymap.set('n', '<leader>cn', '<cmd>CocNext<cr>',  { noremap = true })
 vim.keymap.set('n', '<leader>n', '<cmd>CocNext<cr>',  { noremap = true })
 vim.keymap.set('n', '<leader>cf', '<cmd>CocFirst<cr>',  { noremap = true })
+vim.keymap.set('n', '<leader>cj', '<cmd>call CocAction("jumpDefinition")<cr>',  { noremap = true })
 
 -- Fugitive commands
 vim.keymap.set('n', '<leader>gb', '<cmd>Git blame<cr>',  { noremap = true })
