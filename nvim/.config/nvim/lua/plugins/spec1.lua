@@ -16,7 +16,7 @@ return {
 	-- use("TimUntersberger/neogit")
 
 	-- use {'ziglang/zig.vim'}
-	-- use {'neoclide/coc.nvim', branch = 'release'}
+    { "neoclide/coc.nvim", branch = "release" },
 
 	{ "neovim/nvim-lspconfig" },
     { "preservim/tagbar" },
@@ -28,9 +28,9 @@ return {
     { "tpope/vim-fugitive" },
     { "tpope/vim-surround" },
     { "tpope/vim-commentary" },
-    -- use ("vim-python/python-syntax")
+    { "vim-python/python-syntax" },
     { "mattn/emmet-vim" },
-	{ "github/copilot.vim" }
+	{ "github/copilot.vim" },
 
     -- airline
     {

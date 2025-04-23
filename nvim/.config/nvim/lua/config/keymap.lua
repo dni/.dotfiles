@@ -12,12 +12,13 @@ vim.keymap.set('n', '<F1>', '<cmd>UndotreeToggle<cr>',  { noremap = true })
 vim.keymap.set('n', '<F2>', ':GMove ',  { noremap = true })
 vim.keymap.set('n', '<F3>', '<cmd>TagbarToggle<cr>',  { noremap = true })
 vim.keymap.set('n', '<F4>', ':set splitbelow<CR> :split<CR> :terminal<CR> 10<C-w>_ i',  { noremap = true })
-vim.keymap.set('n', '<m-F4>', '<cmd>qall!<cr>',  { noremap = true })
+vim.keymap.set('n', '<F5>', '<cmd>:luafile %<cr>',  { noremap = true })
+vim.keymap.set('n', '<F6>', '<cmd>CocCommand python.sortImports<cr><cmd>CocCommand editor.action.formatDocument<cr>',  { noremap = true })
+vim.keymap.set('n', '<F8>', '<cmd>Lazy<cr>',  { noremap = true })
 vim.keymap.set('n', '<F9>', '<cmd>Copilot panel<cr>',  { noremap = true })
 vim.keymap.set('i', '<F10>', '<cmd>call copilot#Next()<cr>',  { noremap = true })
 vim.keymap.set('i', '<F11>', '<cmd>call copilot#Previous()<cr>',  { noremap = true })
 vim.keymap.set('n', '<F12>', '<cmd>Copilot enable<cr>',  { noremap = true })
-vim.keymap.set('n', '<F5>', '<cmd>:luafile %<cr>',  { noremap = true })
 vim.keymap.set('n', '<Esc>', '<cmd>q<cr>',  { noremap = true })
 
 -- open / exit terminal mode
@@ -36,7 +37,7 @@ vim.keymap.set('n', '<C-k>', ':bnext<cr>',  { noremap = true })
 vim.keymap.set('n', '<C-j>', ':bprevious<cr>',  { noremap = true })
 
 -- splits
-vim.keymap.set('n', '<enter>', ':vsplit<cr>',  { noremap = true })
+-- vim.keymap.set('n', '<leader>n', ':vsplit<cr>',  { noremap = true })
 
 -- transform splits
 vim.keymap.set('n', '<C-M-h>', '<C-w>>',  { noremap = true })
