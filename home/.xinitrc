@@ -17,8 +17,6 @@ xsettingsd & # settings manager
 
 # open apps
 firefox &
-discord &
-elements-desktop &
 signal-desktop &
 telegram-desktop &
 pavucontrol &
