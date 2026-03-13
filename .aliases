@@ -43,7 +43,7 @@ alias vrc="nvim ~/.config/nvim/lua/config"
 alias vrcp="nvim ~/.config/nvim/lua/plugins"
 alias vrck="nvim ~/.config/nvim/lua/config/keymap.lua"
 alias zrc="nvim ~/.zshrc && source ~/.zshrc"
-alias ho="sudo vim /etc/hosts"
+alias ho="sudo nvim /etc/hosts"
 
 # dir shortcuts
 alias ..="cd .."
@@ -61,3 +61,17 @@ alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
+
+# shortcuts
+alias p="sudo pacman"
+alias m='neomutt'
+alias sk='screenkey -s small --opacity 0.1 &'
+alias i="irssi"
+alias f="ranger"
+alias lg="lazygit"
+alias lag="lazygit"
+alias lad="lazydocker"
+
+# switch wireguard connection
+alias wg0="sudo wg-quick down wg1; sudo wg-quick up wg0"
+alias wg1="sudo wg-quick down wg0; sudo wg-quick up wg1"

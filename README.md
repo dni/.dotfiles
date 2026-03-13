@@ -1,6 +1,9 @@
 # the beginning of a new era :)
 requires stow to manage to symlinks
 
+## without script
+using `stow`
+
 ## dotfiles script
 ```sh
  chmod +x dotfiles

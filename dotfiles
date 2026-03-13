@@ -1,49 +1,20 @@
 #!/bin/sh
-
 install_nvim() {
   echo "installing nvim"
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-  stow nvim
 }
 
-uninstall_nvim() {
-  echo "uninstalling nvim"
-  stow -D nvim 2> /dev/null
-}
-
-install_vim() {
-  echo "installing vim"
-  stow vim
-}
-
-uninstall_vim() {
-  echo "uninstalling vim"
-  stow -D vim 2> /dev/null
-  rm -rf ~/.vim
-}
-
-install_zsh() {
-  echo "installing zsh"
+install_omz() {
+  echo "installing omz"
   if [ -e ~/.oh-my-zsh ]; then
     echo "ohmyzsh already installed"
   else
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null
     echo "oh my zsh installer finished, restart/exit shell now"
   fi
-  rm ~/.zshrc
-  stow zsh
 }
 
-uninstall_zsh() {
-  echo "uninstalling zsh"
-  stow -D zsh 2> /dev/null
+uninstall_omz() {
   rm -rf ~/.oh-my-zsh
-}
-
-install_tmux() {
-  echo "installing tmux"
-  stow tmux
 }
 
 uninstall_tmux() {
@@ -64,49 +35,19 @@ install_irc() {
   stow irc
 }
 
-uninstall_irc() {
-  echo "uninstalling irc..."
-  stow -D irc 2> /dev/null
-  rm -rf ~/.dotfiles/irc/.irssi/scripts
-  rm -f ~/.dotfiles/irc/.irssi/oscar.theme
-}
-
-install_console() {
-  echo "installing console"
-  install_vim
-  install_zsh
-  install_tmux
-}
-
-uninstall_console() {
-  echo "uninstalling console"
-  uninstall_vim
-  uninstall_zsh
-  uninstall_tmux
-}
-
-install_server() {
-  echo "installing server..."
-  stow profile
-  stow server
-  install_console
-  echo "done!"
-}
-
 install() {
-  echo "installing all..."
   stow profile
-  install_console
-  echo "done!"
+  stow nvim
+  install_omz
+  stow zsh
+  stow tmux
 }
 
-uninstall() {
-  echo "uninstalling all..."
-  stow -D profile 2>/dev/null
-  uninstall_console
-  echo "done!"
-}
-
+# check of stow is installed
+if ! command -v stow &> /dev/null; then
+  echo "stow could not be found, please install stow first"
+  exit 1
+fi
 
 # when called with no arguments install_all
 # else execute first parameter
