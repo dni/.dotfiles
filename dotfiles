@@ -1,6 +1,10 @@
-#!/bin/sh
-install_nvim() {
-  echo "installing nvim"
+#!/usr/bin/env bash
+install() {
+  stow profile
+  stow nvim
+  install_omz
+  stow zsh
+  stow tmux
 }
 
 install_omz() {
@@ -17,10 +21,6 @@ uninstall_omz() {
   rm -rf ~/.oh-my-zsh
 }
 
-uninstall_tmux() {
-  echo "uninstalling tmux"
-  stow -D tmux 2> /dev/null
-}
 
 install_irc() {
   echo "installing irc"
@@ -35,13 +35,6 @@ install_irc() {
   stow irc
 }
 
-install() {
-  stow profile
-  stow nvim
-  install_omz
-  stow zsh
-  stow tmux
-}
 
 # check of stow is installed
 if ! command -v stow &> /dev/null; then
