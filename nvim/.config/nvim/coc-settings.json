@@ -19,22 +19,6 @@
       "filetypes": ["lua"],
       "rootPatterns": [".git/", ".hg/"]
     },
-    "clangd": {
-      "command": "clangd",
-      "filetypes": ["h", "c", "cc", "cpp", "c++", "objc", "objcpp"],
-      "rootPatterns": [
-        "compile_commands.json",
-        ".git/",
-        ".hg/",
-        ".clang-tidy",
-        ".clang-format"
-      ],
-      "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/clangd"
-        }
-      }
-    },
     "go": {
       "command": "gopls",
       "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
@@ -43,5 +27,7 @@
         "usePlaceholders": true
       }
     }
-  }
+  },
+  "zig.zls.path": "/usr/bin/zls",
+  "zig.zls.checkForUpdate": false
 }

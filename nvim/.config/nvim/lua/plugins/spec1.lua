@@ -20,17 +20,19 @@ return {
 
 	{ "neovim/nvim-lspconfig" },
     { "preservim/tagbar" },
-    { "mbbill/undotree" },
-    { "puremourning/vimspector" },
+    -- { "mbbill/undotree" },
+    -- { "puremourning/vimspector" },
     -- { "sagi-z/vimspectorpy", run = "VimspectorpyUpdate" }
     --
     -- { "nvim-tree/nvim-web-devicons" },
-    { "tpope/vim-fugitive" },
+    -- { "tpope/vim-fugitive" },
     { "tpope/vim-surround" },
     { "tpope/vim-commentary" },
     { "vim-python/python-syntax" },
     { "mattn/emmet-vim" },
 	{ "github/copilot.vim" },
+	-- { "yetone/avante.nvim" },
+	-- { "johnseth97/codex.nvim" },
 
     -- airline
     {

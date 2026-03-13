@@ -18,7 +18,7 @@ xsettingsd & # settings manager
 # open apps
 firefox &
 signal-desktop &
-telegram-desktop &
+Telegram &
 pavucontrol &
 
 while true; do

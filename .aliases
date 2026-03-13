@@ -53,6 +53,7 @@ alias .....="cd ../../../.."
 alias cdd="cd ~/.dotfiles"
 alias cdr="cd ~/repos"
 alias cds="cd ~/scripts"
+alias cdc="cd /mnt/c"
 alias www="cd /var/www/"
 
 # tmux
