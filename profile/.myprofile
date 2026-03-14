@@ -1,3 +1,96 @@
 #!/usr/bin/env sh
-. ~/.dotfiles/.env
-. ~/.dotfiles/.aliases
+export SCRIPTS=~/scripts
+export DOTFILES=~/.dotfiles
+export ENV=~/.myprofile # this variable is used by sh in an interactive shell
+export PATH=$PATH:$SCRIPTS/bin:~/.local/bin:/usr/local/bin
+
+export EDITOR="nvim"
+export GTK_THEME=Adwaita:dark
+
+# adb fastboot
+if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
+ export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+fi
+
+# java8 is required for jmeter
+export LD_LIBRARY_PATH="/lib:/usr/lib:/usr/local/lib:/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server"
+export _JAVA_AWT_WM_NONREPARENTING=1 # fix java swing apps
+
+
+# aliases
+alias pin='ping -c 3 8.8.8.8'
+alias smysqldump="mariadb-dump --single-transaction --quick --lock-tables=false"
+alias myip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
+alias ssl='certbot certonly --webroot --agree-tos --text --non-interactive --webroot-path /var/www/html -d'
+
+cht(){
+  curl cht.sh/$1
+}
+mkcd(){
+  mkdir $1;cd $1
+}
+
+encrypt(){
+  gpg --encrypt --armor --output ${1}.enc -r $(cat ~/.pubkey) "${1}" && echo "${1} -> ${1}.enc"
+}
+
+decrypt(){
+  gpg --decrypt --output ${1}.dec "${1}" && echo "${1} -> ${1}.dec"
+}
+
+#  gnupg
+alias secret="gpg --armor --encrypt"
+
+# git
+alias gac="git add -A && git commit -am"
+alias grh="git reset --hard"
+alias gp="git push"
+alias gpu="git pull"
+alias gst="git status"
+alias pgp="pass git push"
+
+# shortcuts
+alias t='tree -I ".git" -a'
+alias h="history"
+alias v="nvim"
+alias vf='nvim $(fzf)'
+alias tf='tail -f'
+
+# configs
+alias sp="source ~/.myprofile"
+alias vrc="nvim ~/.config/nvim/lua/config"
+alias vrcp="nvim ~/.config/nvim/lua/plugins"
+alias vrck="nvim ~/.config/nvim/lua/config/keymap.lua"
+alias zrc="nvim ~/.zshrc && source ~/.zshrc"
+alias ho="sudo nvim /etc/hosts"
+
+# dir shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias cdd="cd ~/.dotfiles"
+alias cdr="cd ~/repos"
+alias cds="cd ~/scripts"
+alias cdc="cd /mnt/c"
+alias www="cd /var/www/"
+
+# tmux
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+
+# shortcuts
+alias p="sudo pacman"
+alias m='neomutt'
+alias sk='screenkey -s small --opacity 0.1 &'
+alias i="irssi"
+alias f="ranger"
+alias lg="lazygit"
+alias lag="lazygit"
+alias lad="lazydocker"
+
+# switch wireguard connection
+alias wg0="sudo wg-quick down wg1; sudo wg-quick up wg0"
+alias wg1="sudo wg-quick down wg0; sudo wg-quick up wg1"
